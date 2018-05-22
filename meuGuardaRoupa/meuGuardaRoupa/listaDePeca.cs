@@ -16,5 +16,33 @@ namespace meuGuardaRoupa
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new CadastroDePecas().ShowDialog();
+
+        }
+
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+            AtualizarLista();
+        }
+
+
+        public void AtualizarLista()
+        {
+            for (int i = 0; i < Program.pecas.Count; i++)
+            {
+                Peca peca = Program.pecas[i];
+                dgvListaPeca.Rows.Add(new object[] { peca.Nome, peca.Cor, peca.Marca, peca.Valor });
+            }
+
+        }
+
+        private void listaDePeca_Load(object sender, EventArgs e)
+        {
+            AtualizarLista();
+        }
+
     }
 }

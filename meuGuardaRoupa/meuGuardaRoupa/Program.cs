@@ -8,6 +8,8 @@ namespace meuGuardaRoupa
 {
     static class Program
     {
+        public static List<Peca> pecas = new List<Peca>();
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -16,7 +18,7 @@ namespace meuGuardaRoupa
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new listaDePeca());
         }
     }
 }
