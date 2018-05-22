@@ -44,5 +44,47 @@ namespace meuGuardaRoupa
             AtualizarLista();
         }
 
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            if (dgvListaPeca.CurrentRow == null)
+            {
+                MessageBox.Show("Não há nenhuma peça selecionada!!");
+                return;
+            }
+
+            int linhaSelecionada = dgvListaPeca.CurrentRow.Index;
+           
+            Peca peca = Program.pecas[linhaSelecionada];
+
+            new CadastroDePecas(peca, linhaSelecionada).ShowDialog();
+        }
+
+        private void btnDeletar_Click(object sender, EventArgs e)
+        {
+            if (dgvListaPeca.CurrentRow == null)
+            {
+                MessageBox.Show("Não tem nenhuma peça selecionada");
+                return;
+            }
+
+            int linhaSelecionada = dgvListaPeca.CurrentRow.Index;
+
+            Peca peca = Program.pecas[linhaSelecionada];
+            DialogResult resultado = MessageBox.Show("Deseja apagar" + peca.Nome + "  o registro?",
+                "AVISO", MessageBoxButtons.YesNo);
+
+            if (resultado == DialogResult.Yes)
+            {
+
+                Program.pecas.RemoveAt(linhaSelecionada);
+                AtualizarLista();
+                MessageBox.Show("Registro apagado com sucesso!");
+            }
+            else
+            {
+                MessageBox.Show("Registro não apagado");
+            }
+        }
+
     }
 }

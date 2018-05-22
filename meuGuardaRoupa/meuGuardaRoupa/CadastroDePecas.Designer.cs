@@ -137,14 +137,15 @@
             this.txtNome.Location = new System.Drawing.Point(134, 31);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(356, 20);
-            this.txtNome.TabIndex = 8;
+            this.txtNome.TabIndex = 1;
+            this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             // 
             // txtValor
             // 
             this.txtValor.Location = new System.Drawing.Point(134, 144);
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(356, 20);
-            this.txtValor.TabIndex = 9;
+            this.txtValor.TabIndex = 4;
             // 
             // cbTipo
             // 
@@ -162,7 +163,7 @@
             this.cbTipo.Location = new System.Drawing.Point(134, 68);
             this.cbTipo.Name = "cbTipo";
             this.cbTipo.Size = new System.Drawing.Size(356, 21);
-            this.cbTipo.TabIndex = 10;
+            this.cbTipo.TabIndex = 2;
             // 
             // cbTamanho
             // 
@@ -170,7 +171,7 @@
             this.cbTamanho.Location = new System.Drawing.Point(134, 109);
             this.cbTamanho.Name = "cbTamanho";
             this.cbTamanho.Size = new System.Drawing.Size(356, 21);
-            this.cbTamanho.TabIndex = 11;
+            this.cbTamanho.TabIndex = 3;
             // 
             // cbMarca
             // 
@@ -187,7 +188,7 @@
             this.cbMarca.Location = new System.Drawing.Point(134, 185);
             this.cbMarca.Name = "cbMarca";
             this.cbMarca.Size = new System.Drawing.Size(356, 21);
-            this.cbMarca.TabIndex = 12;
+            this.cbMarca.TabIndex = 5;
             // 
             // cbCor
             // 
@@ -203,7 +204,7 @@
             this.cbCor.Location = new System.Drawing.Point(134, 221);
             this.cbCor.Name = "cbCor";
             this.cbCor.Size = new System.Drawing.Size(356, 21);
-            this.cbCor.TabIndex = 13;
+            this.cbCor.TabIndex = 6;
             // 
             // cbTecido
             // 
@@ -218,14 +219,14 @@
             this.cbTecido.Location = new System.Drawing.Point(134, 261);
             this.cbTecido.Name = "cbTecido";
             this.cbTecido.Size = new System.Drawing.Size(356, 21);
-            this.cbTecido.TabIndex = 15;
+            this.cbTecido.TabIndex = 7;
             // 
             // dtpDataCompra
             // 
             this.dtpDataCompra.Location = new System.Drawing.Point(134, 294);
             this.dtpDataCompra.Name = "dtpDataCompra";
             this.dtpDataCompra.Size = new System.Drawing.Size(356, 20);
-            this.dtpDataCompra.TabIndex = 16;
+            this.dtpDataCompra.TabIndex = 8;
             // 
             // label9
             // 
@@ -245,7 +246,7 @@
             this.rbAtivo.Location = new System.Drawing.Point(134, 330);
             this.rbAtivo.Name = "rbAtivo";
             this.rbAtivo.Size = new System.Drawing.Size(55, 19);
-            this.rbAtivo.TabIndex = 18;
+            this.rbAtivo.TabIndex = 9;
             this.rbAtivo.TabStop = true;
             this.rbAtivo.Text = "Ativo";
             this.rbAtivo.UseVisualStyleBackColor = true;
@@ -257,7 +258,7 @@
             this.rbInativo.Location = new System.Drawing.Point(195, 330);
             this.rbInativo.Name = "rbInativo";
             this.rbInativo.Size = new System.Drawing.Size(67, 19);
-            this.rbInativo.TabIndex = 19;
+            this.rbInativo.TabIndex = 10;
             this.rbInativo.Text = "Inativo";
             this.rbInativo.UseVisualStyleBackColor = true;
             // 
@@ -269,7 +270,7 @@
             this.btnSalvar.Location = new System.Drawing.Point(387, 345);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(103, 44);
-            this.btnSalvar.TabIndex = 21;
+            this.btnSalvar.TabIndex = 12;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSalvar.UseVisualStyleBackColor = true;
@@ -283,15 +284,17 @@
             this.btnCancelar.Location = new System.Drawing.Point(268, 345);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(112, 44);
-            this.btnCancelar.TabIndex = 20;
+            this.btnCancelar.TabIndex = 11;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // CadastroDePecas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Violet;
             this.ClientSize = new System.Drawing.Size(500, 401);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnCancelar);
